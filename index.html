@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Layout Responsivo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://seusite.com/style.css">
+<script src="https://seusite.com/script.js"></script>
+<img src="https://seusite.com/imagem.jpg" alt="Descrição da Imagem">
+
+<style>
+    @media (min-width: 769px) and (max-width: 2080px) {
+        .html, body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+            align-items: center; /* Alinha os itens ao topo */
+            justify-content: center; /* Centraliza os itens horizontalmente */
+        }
+        
+        /* Estilos para o container principal */
+        .container {
+            background-color: blue;
+            width: 90%;
+            height: 100px;
+            display: flex;
+            top: 0;
+            position: fixed;
+            z-index: 1000;
+            align-items: center;
+            padding: 0 20px;
+ /* Necessário para o posicionamento do botão de menu */
+        }
+
+        .logo {
+            width: 10%;
+            height: 40%;
+            margin-right: 30%;
+        }
+
+        .conteudo {
+            display: none;
+        }
+
+        .somos {
+        width: 100%;
+        margin: 5%;
+        background-color: white;
+        }
+
+        .contato {
+            width: 100%;
+            background-color: #fbfbfb;
+            position: relative;
+        }
+        .imagem {
+    width: 100%;  
+    height: 600px;/* Mantém a proporção da imagem */
+}
+.ogn {
+    margin-right: 20%;
+    width: 60%;
+}
+.sobre-imagem {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;align-items: center;
+    justify-content: center;
+    justify-content: center;
+    width: 80%;
+    height: 60%;
+    top: 150px; /* Distância do topo */
+    left: 100px;
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas */
+}
+.inputorgbut {
+    background-color: #eeeeee;
+    border: none;
+    margin: 3%;
+    font-size: 20px;
+    border-radius: 3%;
+    width: 80%;
+    height: 50%;
+}
+
+.inputorg {
+    margin:3%; 
+    border-radius: 3px; 
+    font-size: 20px;
+    border: none; 
+}
+.enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 70%;
+    background-color: blue;
+}
+.textos{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ddd;
+}
+.text1 {
+    font-size: 50px;
+    text-align: center;
+}
+.text2 {
+    font-size: 20px;
+    text-align: center;
+}
+.text3 {
+    font-size: 25px;
+    text-align: center;
+}
+.contato-forns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    width: 80%;
+    border-radius: 5px;
+    height: 80%;
+   }
+        .inicio {
+            display:flex ;
+            display: block;
+            flex-direction: column;
+            margin-top: 10%;
+            width: 100%;
+            align-items: center;
+        }
+        .garota {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #ffffff;
+            justify-content: center;
+            margin-bottom: 0%;
+            margin-top: 5%;
+        }
+
+        .garota.reverse {
+            flex-direction: row-reverse;
+            margin: 5%;
+        }
+        
+        .bot {
+            width: 30%;
+            margin-right: 5%;
+            
+        }
+
+        .painelquemsomos {
+            display: flex;
+            text-align: center;
+            flex-direction: row;
+            justify-items: center;
+            align-items: center;
+            margin: 8%;
+            
+        }
+
+        .conceiuadaajuste {
+            width: 50%;
+            margin-left: 10%;
+        }
+
+        .conceiuadaajustes {
+            justify-items: center;
+            width: 50%;
+            margin-left: 5%;
+        }
+        
+        .Conceituadafoto {
+            width: 100%;
+        }
+
+        .Conceituadatexto {
+            font-size: 35px;
+            color: #040c72;
+        }
+
+        /* Estilos para os itens do menu e botão */
+        .menu-item {
+            color: white;
+            margin: 0 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn {
+            background-color: rgb(17, 170, 175); /* Cor de fundo do botão */
+            color: white; /* Cor do texto */
+            border: none; /* Remove bordas */
+            border-radius: 1px; /* Arredonda os cantos */
+            padding: 10px 20px; /* Espaçamento interno */
+            font-size: 16px; /* Tamanho da fonte */
+            display: flex; /* Flexbox para alinhar o ícone e o texto */
+            align-items: center; /* Centraliza verticalmente */
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+        }
+
+        .btn:hover {
+            transform: scale(1.05); /* Aumenta o tamanho no hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn i {
+            margin-right: 15px;
+        }
+
+        /* Estilo do botão de menu */
+        .menu-toggle {
+            display: none; /* Oculta o botão de menu por padrão */
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            background-color: #007BFF;
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .menu-toggle:hover {
+            background-color: #0056b3;
+        }
+
+        /* Menu mobile */
+        .mobile-menu {
+            display: none; /* Oculta o menu móvel por padrão */
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: blue;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .mobile-menu a {
+            color: white;
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .mobile-menu a:hover {
+            background-color: #0056b3;
+        }
+        .menu {
+            display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1000; /* Acima da .container */
+    top: 60px; /* Ajuste conforme necessário */
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .menu .menu-item {
+            color: white;
+            font-size: 24px;
+            margin: 15px;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            color: lightcoral; /* Muda a cor do texto */
+            transform: scale(1.1); /* Aumenta o tamanho do texto */
+        }
+        .fotogarota {
+                width: 30%;
+                margin-right: 5%;
+            }
+
+        .h1 {
+            font-size: 30px;
+        }
+         
+        .form-container {
+            width: 100%;
+            height: 200px;
+            background-color: #2286f0; 
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .contactForm {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-group input  {
+            margin: 1%;
+            width: 80%;
+            padding: 9px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 15px;
+        }
+        
+        .form-group select {
+            width: 80%;
+            padding: 9px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+        .mapa {
+            background-color: #2286f0; 
+            display: flex;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .nome {
+            border-radius: 5px;
+            height: 30px;
+            font-size: 18px;
+            margin-inline-start: 2%;
+        }
+        .fox {
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .sel {
+            font-size: 20px;
+        }
+
+        .button {
+            font-size: 20px;
+            margin-left: 1%;
+        }
+
+
+        .whatsapp-icon {
+            background-color: rgb(105, 158, 238); /* Cor de fundo do botão */
+            color: white; /* Cor do texto */
+            border: none; /* Remove bordas */
+            border-radius: 5px; /* Arredonda os cantos */
+            padding: 10px 20px; /* Espaçamento interno */
+            font-size: 16px; /* Tamanho da fonte */
+            display: flex; /* Flexbox para alinhar o ícone e o texto */
+            align-items: center; /* Centraliza verticalmente */
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            transition: transform 1.2s, box-shadow 0.2s; /* Transições suaves */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .whatsapp-icon:hover {
+            color: #30cb2a; /* Cor mais escura do WhatsApp ao passar o mouse */
+        }
+
+        .painelquemsomos {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+        }
+        .Conceituadatexto {
+            font-size: 35px;
+            margin-top: 10%;
+        }
+        .Conceituadafoto {
+            width: 80%;
+        }
+
+        .fotos {
+            width: 15%;
+            margin-top: 5%;
+        }
+
+        .fotocontato {
+            width: 100%;
+        }
+
+        .table {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: rgb(135, 135, 144);
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 80%;
+            margin: 2%;
+            background-color: rgb(135, 135, 144);
+        }
+        .cell {
+            flex: 1, 2; /* Faz com que todas as células tenham a mesma largura */
+            border: 1px solid rgb(252, 252, 252);
+            padding: 5px;
+            text-align: center;
+            margin: 1%;
+            background-color: aliceblue;
+            width: 80%;
+            height: auto;
+            border-radius: 20px;
+        }
+        .cell img {
+            max-width: 20%;
+            height: auto;
+        }
+
+        .carousel-wrapper {
+            width: 100%;
+            max-width: 900px; /* Largura máxima para o carrossel */
+            margin: 0 auto; /* Centraliza horizontalmente */
+            padding: 20px; /* Espaçamento interno ao redor do carrossel */
+            box-sizing: border-box;
+     }
+
+     .swiper-container {
+        text-align: center;
+        margin: 5%;
+         width: 900px;
+         height: 250px; /* O carrossel ocupa 100% da largura do contêiner */
+     }
+
+     .swiper-wrapper {
+        display: flex;
+        text-align: center;
+        width: 100%;
+        height: 500px;
+     }
+
+     .swiper-slide {
+        display: flex;
+         flex-direction: row;
+         background-color: #ffffff;
+         align-items: center;
+         justify-items: center;
+        width: 200px;
+        height: 250px;
+          /* Faz o slide ocupar toda a altura do carrossel */
+     }
+
+     .swiper-slide img {
+         width: 700px;
+         margin: 5%;
+         height: auto; /* Mantém a proporção da imagem */
+         border-radius: 10px; /* Borda arredondada opcional */
+     }
+
+     
+     .final {
+        width: 100%;
+     }
+     .xfts {
+    width: 100%;
+   }
+   .xft {
+    width: 80%;
+   }
+    }
+        /* Media query para telas menores */
+        @media (max-width: 768px) {
+            .html, body {
+                display: flex;
+                background-color: #ffffff;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                overflow-x: hidden;
+            }
+
+            .container {
+                height: 80px;
+                width: 90%;
+                position: fixed;
+                top: 0;
+                background-color: blue;
+                padding: 10px;
+                text-align: center;
+                z-index: 1000;
+                overflow-x: auto;
+                display: flex;
+            }
+
+            .logo {
+                width: 150px;
+                height: 50px;
+                margin-right: 40%;
+            }
+
+            .menu-toggle {
+                display: block;
+                width: 50px;
+                height: 50px; /* Exibe o botão de menu */
+            }
+
+            .inicio {
+                padding-top: 80px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 10px;
+                height: 90%;
+                width: 100%;
+                background-color: #ffffff;
+            }
+
+            .garota {
+               position: relative;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               background-color: #ffffff;
+               justify-items: center;
+            }
+             
+            .garota.reverse {
+                width: 90%;
+            
+            }
+
+           .garotarow {
+            text-align: center;
+            }
+             .bot {
+                display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+             }
+
+            .fotogarota {
+                width: 50%;
+                margin-top: 20px;
+            }
+
+            .menu {
+                display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1001; /* Acima da .container */
+    top: 100px; /* Abaixo da barra de navegação */
+    right: 0;
+    background-color: blue;
+    padding: 3%;
+    width: 50%;
+    height: 20%;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .menu-item {
+            background-color: white;
+            font-size: 24px;
+            margin: 15px;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            color: lightcoral; /* Muda a cor do texto */
+            transform: scale(1.1); /* Aumenta o tamanho do texto */
+        }
+            .menu-item, .btn {
+                display: none; /* Oculta os itens do menu e o botão padrão */
+            }
+
+            .mobile-menu {
+                display: none; /* Exibe o menu móvel */
+            }
+
+        .whatsapp-icon {
+            background-color: #007BFF;
+            border: none;
+            width: 80%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+            color: #ffffff; /* Cor verde do WhatsApp */
+            transition: color 0.3s ease;
+        }
+        .whatsapp-icon:hover {
+            color: #0cfb04; /* Cor mais escura do WhatsApp ao passar o mouse */
+        }
+
+        .form-container {
+                width: 100%;
+                display: flex;
+                background-color: #2286f0;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
+            }
+
+        .form-group input  {
+            margin-bottom: 15px;
+            width: 90%;
+            padding: 9px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-group select {
+            width: 90%;
+            padding: 9px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-group {
+            width: 90%;
+            padding: 9px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .contato-forns {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            background-color: #2286f0;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            align-items: center;
+            justify-items: center;
+
+        }
+
+        .botaoenviar {
+            width: 60%;
+            background-color: #4089f7;
+            font-size: 35px;
+            border-radius: 20px;
+            color: #ddd;
+        }
+
+        .table {
+            font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(162, 162, 170);
+            }
+            .row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
+                background-color: rgb(162, 162, 170);
+                width: 400px;
+                margin-bottom: 2px;
+            }
+            .cell {
+                display: flex;
+                width: 80%;
+                border-bottom: 1px solid rgb(255, 255, 255);
+                border-radius: 20px;
+                background-color: aliceblue;
+                margin: 1%;
+                box-sizing: border-box;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-items: center;
+            }
+
+            .cell:last-child {
+                margin: 1%;
+            }
+
+            .mapa {
+            background-color: #2286f0;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nome {
+            border-radius: 5px;
+            height: 25px;
+            font-size: 18px;
+        }
+        .fox {
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+        }
+        
+        
+        .painelquemsomos {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .conceiuadaajuste {
+            width: 70%;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .conceiuadaajustes {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .Conceituadafoto {
+            width: 80%;
+            margin-bottom: 2%;
+        }
+         
+         .Conceituadatexto  {
+            width: 90%;
+            text-align: center;
+            font-size: 23px;
+         }
+
+        .button {
+            font-size: 25px;
+            border-radius: 20px;
+            width: 200px;
+            background-color: #ffffff;
+            border: none;
+        }
+
+        .fotos {
+            width: 30px;
+            margin-top: 2%;
+        }
+
+        .fotocontato {
+            width: 400px;
+            margin-top: 3%;
+        }
+        .carousel-wrapper {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-container {
+    width: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    width: 50px;
+    height: 100px;
+    background-color: #ffffff;
+}
+
+.swiper-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    width: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Borda arredondada opcional */
+}
+
+
+/* Estilos para a paginação */
+.swiper-pagination {
+    bottom: 10px;
+}
+ .veiculo {
+    font-size: 20px;
+    width: 70%;
+    color: #007BFF;
+    text-align: center;
+ }
+
+ .veiculos {
+    width: 90%;
+    text-align: center;
+ }
+
+ .somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .imagem {
+    width: 100%; /* Ajuste conforme necessário */
+    height: 500px; /* Mantém a proporção da imagem */
+}
+
+.sobre-imagem {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    height: 60%;
+    top: 180px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    /* Fundo semi-transparente */
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas */
+}
+ .contato {
+    display: none;
+    position: relative;
+    width: 400px;
+
+ }
+  
+ .Depoimento {
+    font-size: large;
+ }
+  
+  .cell h1 {
+    font-size: 18px;
+  }
+    
+  .final {
+    width: 400px;
+  }
+  .Conceituadatextos {
+    text-align: center;
+    width: 100%;
+  }
+   .x {
+    font-size: 10px;
+   }
+
+   .xft {
+    width: 400px;
+   }
+   .xfts {
+    width: 400px;
+    margin-top: 20%;
+   }
+   .enviar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+   }
+   .contato-forns {
+    background-color: blue;
+    width: 70%;
+    border-radius: 10px;
+    height: 160px;
+    
+   }
+   .inputorg {
+    margin: 2%;
+   }
+   .inputorgbut {
+    margin: 3%;
+
+}
+.fas fa-bars {
+    font-size: 20px;
+
+}
+
+
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <img class="logo" src="imagem/logo-teteu.png" alt="Logo">
+        <h4 class="menu-item" onclick="mostrarDiv('inicio')">INÍCIO</h4>
+        <h4 class="menu-item" onclick="mostrarDiv('somos')">QUEM SOMOS</h4>
+        <h4 class="menu-item" onclick="mostrarDiv('contato')">CONTATO</h4>
+        <button class="btn"><a href="https://wa.me/5511999999999"></a><i class="fas fa-phone"></i> Simulação Gratuita</button>
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    </div> 
+    
+    <div id="menu" class="menu">
+        <h4 class="menu-iten" onclick="mostrarDiv('inicio')">INÍCIO</h4>
+        <h4 class="menu-iten" onclick="mostrarDiv('somos')">QUEM SOMOS</h4>
+        <h4 class="menu-iten" onclick="mostrarDiv('contato')">CONTATO</h4>
+    </div>
+
+
+    <div id="inicio" class="conteudo inicio">
+        <div class="garota reverse">
+                <img id="intem1" class="fotogarota" src="imagem/banner-home.png" alt="">
+                <div id="intem2" class="bot">
+                    <h1 class="veiculo">Veículo com juros abusivos nunca mais!!!</h1>
+                    <h5 class="veiculos">Conte com nossos especialistas e recursos atualizados para solucionar problemas de contratos com juros abusivos e emissão de 2ª via de boletos com confiança e eficiência..</h5>
+                    <button class="whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>FALE CONOSCO
+                    <a href="https://wa.me/5511999999999" class="" target="_blank"></a></button>
+            </div>
+        </div>
+
+                <div class="form-container">
+                    <h2 style="color: #ffffff;">Nós ligamos para você!</h2>
+                    <h4 style="color: #ffffff;">Solicite uma consulta sem compromisso.</h4>
+                    <form id="contactForm" class="contactForm">
+                        <div class="form-group">
+                            <div class="mapa">
+                                <form class="fox">
+                                    
+                                    <input class="nome" type="text" id="name" name="name" placeholder="Seu nome" required><br>
+                            
+                                    <input class="nome" type="tel" id="phone" name="phone" placeholder="(xx) xxxxx-xxxx" oninput="formatPhone(this)" required><br>
+                            
+                                    <select class="sel" id="selection" name="selection" required>
+                                        <option value="">-- Selecione --</option>
+                                        <option value="Opção 1">Opção 1</option>
+                                        <option value="Opção 2">Opção 2</option>
+                                        <option value="Opção 3">Opção 3</option>
+                                    </select><br>
+                            
+                                    <button class="button" type="button" onclick="sendWhatsApp()">Enviar Solicitação</button>
+                                </form>
+                            </div>
+                </div>
+                </div>
+                <div class="painelquemsomos">
+                    <div class="conceiuadaajuste"><h1 class="Conceituadatexto">Somos Uma Empresa Conceituada</h1>
+                        <h5 class="Conceituadatextos" >Antes de tudo, é muito importante que você nos conheça melhor. A Empresa conta com uma ampla história de expertise em consultoria e com a melhor estrutura do mercado, oferecemos um trabalho especializado em revisão contratual no financiamento de veículos. Por meio de profissionais capacitados, focados e rigorosos na correção das taxas, a A nossa Empresa vem se firmando no mercado como a melhor empresa de consultoria em análise contratual de financiamento de veículos no Brasil.</h5></div>
+                    <div class="conceiuadaajustes"><img class="Conceituadafoto" src="imagem/prazer.png" alt=""></div>
+                    
+                </div>
+                <div class="table">
+                    <div class="row">
+                        <div class="cell">
+                            <img class="fotos" src="imagem/carro-esporte.png" alt="Carro Esporte">
+                            <h1>Busca e Apreensão</h1>
+                            <h3 class="x">Não perca seu veículo para o banco, faça uma revisão contratual.</h3>
+                        </div>
+                        <div class="cell">
+                            <img class="fotos" src="imagem/juros-de-lucro.png" alt="Carro Esporte">
+                            <h1>Juros Abusivos</h1>
+                            <h3 class="x">Não perca seu veículo para o banco, faça uma revisão contratual.</h3>
+                        </div>
+                        <div class="cell">
+                            <img class="fotos" src="imagem/calendario.png" alt="Carro Esporte">
+                            <h1>Parcelas Atrasadas</h1>
+                            <h3 class="x">Não perca seu veículo para o banco, faça uma revisão contratual.</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            <img class="fotos" src="imagem/revisao.png" alt="Carro Esporte">
+                            <h1>Revisão de Contrato</h1>
+                            <h3 class="x">Não perca seu veículo para o banco, faça uma revisão contratual.</h3>
+                        </div>
+                        <div class="cell">
+                            <img class="fotos" src="imagem/perceber.png" alt="Carro Esporte">
+                            <h1>Alienação Fiduciária</h1>
+                            <h3 class="x">Não perca seu veículo para o banco, faça uma revisão contratual.</h3>
+                        </div>
+                        <div class="cell">
+                            <img class="fotos" src="imagem/moeda.png" alt="Carro Esporte">
+                            <h1>Quite seu Veículo</h1>
+                            <h3 class="x">Não perca seu veículo para o banco, faça uma revisão contratual.</h3>
+                        </div>
+                    </div>
+                </div>
+                <img class="fotocontato" src="imagem/Captura de tela_17-9-2024_113158_fbwcorretora.com.jpeg" alt="">
+                <h1 class="Depoimento" >Depoimento dos nossos clientes</h1>
+                <div class="carousel-wrapper">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111035_fbwcorretora.com.jpeg" alt="Imagem 1"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111056_fbwcorretora.com.jpeg" alt="Imagem 2"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111121_fbwcorretora.com.jpeg" alt="Imagem 3"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111035_fbwcorretora.com.jpeg" alt="Imagem 1"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111056_fbwcorretora.com.jpeg" alt="Imagem 2"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111121_fbwcorretora.com.jpeg" alt="Imagem 3"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111035_fbwcorretora.com.jpeg" alt="Imagem 1"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111056_fbwcorretora.com.jpeg" alt="Imagem 2"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111121_fbwcorretora.com.jpeg" alt="Imagem 3"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111035_fbwcorretora.com.jpeg" alt="Imagem 1"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111056_fbwcorretora.com.jpeg" alt="Imagem 2"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111121_fbwcorretora.com.jpeg" alt="Imagem 3"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111035_fbwcorretora.com.jpeg" alt="Imagem 1"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111056_fbwcorretora.com.jpeg" alt="Imagem 2"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111121_fbwcorretora.com.jpeg" alt="Imagem 3"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111035_fbwcorretora.com.jpeg" alt="Imagem 1"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111056_fbwcorretora.com.jpeg" alt="Imagem 2"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111121_fbwcorretora.com.jpeg" alt="Imagem 3"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111035_fbwcorretora.com.jpeg" alt="Imagem 1"></div>
+                            <div class="swiper-slide"><img src="imagem/ de tela_17-9-2024_111056_fbwcorretora.com.jpeg" alt="Imagem 2"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111121_fbwcorretora.com.jpeg" alt="Imagem 3"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111035_fbwcorretora.com.jpeg" alt="Imagem 1"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111056_fbwcorretora.com.jpeg" alt="Imagem 2"></div>
+                            <div class="swiper-slide"><img src="imagem/Captura de tela_17-9-2024_111121_fbwcorretora.com.jpeg" alt="Imagem 3"></div>
+                        </div>
+                        <!-- Adicione os botões de navegação e paginação se necessário -->
+                      
+                    </div>
+                </div>
+               
+     </div>
+
+                <div id="somos" class="conteudo somos" style="display: none;">
+                    <img class="xfts" src="imagem/quemsomos.jpeg" alt="">
+                    <img class="xft" src="imagem/conheca.jpeg" alt="">
+                    <img class="xft" src="imagem/contrarar.jpeg" alt="">
+                </div>
+
+                <div style="display: none;" id="contato" class="conteudo contato">
+                   <img src="imagem/contatox.png" alt="Imagem de exemplo" class="imagem">
+                   <div class="sobre-imagem">
+                    <div class="ogn">
+                        <h1 class="text1">Fale agora conosco!</h1>
+                        <h4 class="text2">Nossa equipe retornará o mais breve possível </h4>
+                        <h4 class="text3">(11) 94769-4055 ou (11)51085482</h4>
+
+                    </div>
+                    <div class="enviar">
+                    <form id="contato-forns" class="contato-forns">
+
+                       <p class="textos">ENTRE EM CONTATO</p> 
+                        <input class="inputorg" type="text" id="nome" name="nome" placeholder="Nome" required>
+                        
+                        <input class="inputorg" type="text" id="telefone" name="telefone" placeholder="(00)00000-0000" required>
+                        
+                        <button class="inputorgbut" type="submit">Informações</button>
+                    </form>
+                </div>
+                   </div>
+
+                </div>
+
+                
+                      
+                          
+                            <img class="final" src="imagem/Captura de tela_19-9-2024_111353_fbwcorretora.com.jpeg" alt=""> 
+                
+                
+                
+                <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+                <script>
+                    // Inicializar o Swiper
+                    const swiper = new Swiper('.swiper-container', {
+                        loop: true, // Permite o loop contínuo
+                        autoplay: {
+                            delay: 5000, // Tempo de exibição de cada slide (em milissegundos)
+                        },
+                        speed: 100, // Tempo de transição entre os slides (em milissegundos)
+                        slidesPerView: 1, // Exibe um slide por vez
+                        spaceBetween: 0, // Espaçamento entre slides
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    });
+                    
+                </script>
+                
+                <script>
+                    function formatPhone(input) {
+                        let value = input.value.replace(/\D/g, '');
+                        if (value.length > 2) {
+                            value = `(${value.substring(0, 2)}) ${value.substring(2)}`;
+                        } else if (value.length > 0) {
+                            value = `(${value}`;
+                        }
+                        input.value = value;
+                    }
+            
+                    function sendWhatsApp() {
+                        const phoneInput = document.getElementById('phone').value.replace(/\D/g, '');
+                        const nameInput = document.getElementById('name').value;
+                        const selectionInput = document.getElementById('selection').value;
+            
+                        // Link fixo do WhatsApp para onde a mensagem será enviada
+                        const myWhatsAppLink = 'https://wa.me/5511947694055'; // Substitua pelo seu link
+            
+                        if (phoneInput.length === 11) { // Verifica se tem 11 dígitos (formato brasileiro)
+                            const message = encodeURIComponent(`Nome: ${nameInput}\nSeleção: ${selectionInput}`);
+                            const url = `${myWhatsAppLink}?text=${message}`;
+                            window.open(url, '_blank');
+                        } else {
+                            alert("Por favor, preencha o número corretamente.");
+                        }
+                    }
+                </script>
+    <script>
+
+const menuToggle = document.querySelector('.menu-toggle'); // Corrigido
+const menu = document.getElementById('menu');
+
+// Mostrar/ocultar o menu ao clicar no botão
+menuToggle.addEventListener('click', (event) => {
+    event.stopPropagation(); // Impede que o clique no botão feche o menu
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+});
+
+// Fechar o menu ao clicar fora dele
+document.addEventListener('click', (event) => {
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    }
+});
+
+// Adiciona um evento de clique nas opções do menu
+const menuItems = document.querySelectorAll('.menu-item');
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        menu.style.display = 'none'; // Fecha o menu ao clicar em um item
+    });
+});
+
+
+
+    </script>
+
+<script>
+    
+     function mostrarDiv(divId) {
+            // Esconder todas as divs
+            const divs = document.querySelectorAll('.conteudo');
+            divs.forEach(div => div.style.display = 'none');
+
+            // Mostrar a div selecionada
+            const divParaMostrar = document.getElementById(divId);
+            if (divParaMostrar) {
+                divParaMostrar.style.display = 'block';
+            }
+        }
+</script>
+</body>
+</html>
+
